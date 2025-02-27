@@ -7,6 +7,8 @@ import 'package:focus_mode/pages/focus_details/focus_details_binding.dart';
 import 'package:focus_mode/pages/focus_details/focus_details_view.dart';
 import 'package:focus_mode/pages/focus_first/focus_first_binding.dart';
 import 'package:focus_mode/pages/focus_first/focus_first_view.dart';
+import 'package:focus_mode/pages/focus_mang/focus_mang_binding.dart';
+import 'package:focus_mode/pages/focus_mang/focus_mang_view.dart';
 import 'package:focus_mode/pages/focus_out/focus_out_binding.dart';
 import 'package:focus_mode/pages/focus_out/focus_out_view.dart';
 import 'package:focus_mode/pages/focus_second/focus_second_binding.dart';
@@ -16,6 +18,7 @@ import 'package:focus_mode/pages/focus_tab/focus_tab_view.dart';
 import 'package:focus_mode/pages/no_network/no_network_binding.dart';
 import 'package:focus_mode/pages/no_network/no_network_view.dart';
 import 'package:focus_mode/pages/records/records_binding.dart';
+import 'package:focus_mode/pages/records/records_ting.dart';
 import 'package:focus_mode/pages/records/records_view.dart';
 import 'package:get/get.dart';
 
@@ -40,7 +43,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Focus,
-      initialRoute: '/focusTab',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -92,10 +95,12 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Focus = [
+  GetPage(name: '/', page: () => const FocusMangView(), binding: FocusMangBinding()),
   GetPage(name: '/error_net', page: () => NoNetworkPage(), binding: NoNetworkBinding()),
   GetPage(name: '/focusTab', page: () => FocusTabPage(), binding: FocusTabBinding()),
   GetPage(name: '/focusSecond', page: () => FocusSecondPage(), binding: FocusSecondBinding()),
   GetPage(name: '/focusFirst', page: () => FocusFirstPage(), binding: FocusFirstBinding()),
+  GetPage(name: '/recordsBing', page: () => const RecordsTing()),
   GetPage(name: '/focusDetails', page: () => FocusDetailsPage(), binding: FocusDetailsBinding()),
   GetPage(name: '/focusAdd', page: () => FocusAddPage(), binding: FocusAddBinding()),
   GetPage(name: '/focusOut', page: () => FocusOutPage(), binding: FocusOutBinding()),

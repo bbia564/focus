@@ -24,7 +24,7 @@ class RecordsTing extends GetView<PageLogic>{
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.smjkuwe.value)),
+              url: WebUri.uri(Uri.parse(controller.crjzlah.value)),
             ),
             onWebViewCreated: (c) {
               controller.webViewController = c;

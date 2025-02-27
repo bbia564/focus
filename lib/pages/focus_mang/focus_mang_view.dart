@@ -11,8 +11,8 @@ class FocusMangView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.bogisich.value
-              ? const CircularProgressIndicator(color: Colors.green)
+          () => controller.skiles.value
+              ? const CircularProgressIndicator(color: Colors.blue)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class FocusMangView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.erkom();
+              controller.uywlgzp();
             },
             icon: const Icon(
               Icons.restart_alt,
